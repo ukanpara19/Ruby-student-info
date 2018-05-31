@@ -1,0 +1,44 @@
+<html>
+  <head>
+
+    <title><%= @comment.name %></title>
+    <link href="/style.css" rel='stylesheet', type='text/css'>
+  </head>
+
+  <body>
+
+   <h2>Student Information System</h2>
+
+  <img src="image/main_menu.jpg" height="350" width="700" align="center">
+<br>
+<br>
+
+      <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/about'>About</a></li>
+          <li><a href='/contact'>Contact</a></li>
+          <li><a href='/students'>Students</a></li>
+          <li><a href='/comments'>Comment</a></li>
+          <li><a href='/video'>Video</a></li>
+          <li><a href='/logout'>Logout</a></li>
+  </ul>
+
+  <br>
+  <br>
+
+  <div>
+    <p>ID: <%= @comment.comment_id %></p>
+    <p>Comment: <%= @comment.comment %></p>
+    <p>Name: <%= @comment.name %></p>
+    <p>Time Created: <%= @comment.created_at %></p>
+    
+    <form method="post" action="/comments/<%= @comment.comment_id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+      </form>
+      </div>
+      <div>
+
+    <form method="get" action="/comments"><button type="submit">Back</button></form>
+</body>
+</html>

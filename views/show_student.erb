@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title><%= @student.FirstName %> <%= @student.LastName %></title>
+    <link href="/style.css" rel='stylesheet', type='text/css'>
+  </head>
+  <body>
+   <h2>Student Information System</h2>
+  <img src="image/main_menu.jpg" height="350" width="700" align="center">
+
+  <br>
+  <br>
+    <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/about'>About</a></li>
+        <li><a href='/contact'>Contact</a></li>
+        <li><a href='/students'>Students</a></li>
+        <li><a href='/comments'>Comment</a></li>
+        <li><a href='/video'>Video</a></li>
+        <li><a href='/logout'>Logout</a></li>
+    </ul>
+
+  <br>
+  <br>
+
+    <div>
+      <p>Student ID : <%= @student.student_id%></p>
+      <p>First Name: <%= @student.FirstName %></p>
+      <p>Last Name: <%= @student.LastName %></p>
+      <p>Address: <%= @student.Address %></p>
+      <p>Date of Birth: <%= @student.DateOfBirth %></p>
+      
+      <form action = '/students/<%= @student.student_id %>/edit'>
+    
+    <input type="submit" value = "Edit">
+      </form>
+      
+      <form method="post" action="/students/<%= @student.student_id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+      </form>
+    </div>
+    <form method="get" action="/students"><button type="submit">Back</button></form>
+  </body>
+</html>

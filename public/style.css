@@ -1,0 +1,39 @@
+html {background-color: #9bc2cf;}
+body {
+    width:700px;
+    height:900px;
+    background-color:#e0dcd0;
+    margin:3em auto 3em;
+    padding:25px;
+    position:relative;
+}
+
+h2 {
+    color:#414e63
+}
+
+ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    background: #52575e;
+    overflow: hidden;
+    width: 80%;
+    
+}
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration:none;
+    display:block;
+    padding:9px;
+    background: #585858;
+    color: white;
+}
+
+a:hover {
+    background: #4c3047
+}
